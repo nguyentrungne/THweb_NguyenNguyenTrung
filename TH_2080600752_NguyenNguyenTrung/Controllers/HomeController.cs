@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using TH_2080600752_NguyenNguyenTrung.Models;
 
 namespace TH_2080600752_NguyenNguyenTrung.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext _dbcontext;
+        public HomeController() 
+        {
+            _dbcontext = new ApplicationDbContext();
+        }
         public ActionResult Index()
         {
-            return View();
+            var upcommingCourse = _dbcontext.Courses
+                .Include(c => c.Lecture)
+                .Include(c => c.Category)
+                .Where(c => c.DateTime > DateTime.Now);
+            return View(upcommingCourse);
         }
 
         public ActionResult About()

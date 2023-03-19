@@ -16,7 +16,7 @@ namespace TH_2080600752_NguyenNguyenTrung.Models
         [Required]
         [StringLength(255)]
         public string Place { get; set; }
-        public string DateTime { get; set; }
+        public DateTime DateTime { get; set; }
         public Category Category { get; set; }
         [Required]
         public byte CategoryId { get; set; }

@@ -25,6 +25,35 @@ textarea {
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-    background-color: #777;
-    border-color: #fff
+    background-color: blue;
+    border-color: blue
+}
+.navbar-inverse{
+    background-color: aqua;
+    border-color: white;
+}
+.navbar-inverse .navbar-nav > li >a{
+    color: white;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.course{
+    list-style: none;
+}
+.course > li{
+    position: relative;
+    margin-bottom: 30px;
+}
+.course > li .date {
+    text-align: center;
+    background-color: aqua;
+    color: white;
+    width: 70px;
+    border-radius: 10px;
+}
+.course > li .details{
+    position: absolute;
+    top: 0;
+    left: 70px;
 }
