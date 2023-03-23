@@ -24,5 +24,6 @@ namespace TH_2080600752_NguyenNguyenTrung.ViewModels
         { 
             return DateTime.Parse(string.Format("{0} {1}", Date, Time)); 
         }
+
     }
 }
